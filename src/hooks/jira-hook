@@ -93,6 +93,10 @@ def make_comment_message(what, id, hash, url, who, branch, subject, gerrit_prj, 
 
 
 def update_ticket(what, id, hash, url, who, branch,topic):
+    if (not branch in ["neo90", "repo90",]):
+        print 'Branch "%s" is not in ["neo90", "repo90", "refs/for/neo90", "refs/for/repo90",]: skip this.\n' % branch
+        logging.info('[update_ticket] Branch "%s" is not in ["neo90", "repo90",]: skip this.\n' % branch)
+        exit()
     status, out = commands.getstatusoutput(gerrit_cmd + ' query --format TEXT change:' + id + ' limit:1')
     logging.debug("[update_ticket] Running Gerrit Query Result:\n" + out)
     if (status != 0):

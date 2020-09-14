@@ -1,2 +1,2 @@
 #!/bin/bash
-python `dirname $0`/jira-hook --action new --change Iad6c380722a2d982c8b5ad96c04a16a4dc0f60c6 --commit c3c567c7adfb165f2501734927e905b60169107e --change-url "http://localhost:8088/30" --branch "refs/for/master"
+python `dirname $0`/jira-hook --action merged --change I940c5c57bfbefd9faf89460c30e3d2802837066c --commit c8cd2460649297eec34deb8e7d2488bfa0e2b190 --change-url "http://awalla3.na.ff-americas.com:8080/13882" --branch "neo90"
